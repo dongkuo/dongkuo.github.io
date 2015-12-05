@@ -1,12 +1,21 @@
-permalink: /:year/:month/:day/:title.html	#博文的固定链接
-paginate: 10                                #分页时每页博文数量
-author:                                     #自定义常亮
-	name: dongkuo
-	email: 893309018@qq.com
-	link: http://dongkuo.github.io/
-title: dongkuo的博客                        #自定义常量
-locals:                                     #自定义常量
-	tags: 标签
-	about: 关于
-	active: 技术                            #自定义常量
-markdown: redcarpet                         #markdown解释器
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Your awesome title
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+markdown: kramdown
