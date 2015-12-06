@@ -8,6 +8,6 @@ github_username: dongkuo
 permalink: /:year/:month/:day/:title.html
 
 # Build settings
-markdown: maruku
+markdown: Kramdown
 
 subtitle: 不学数学的程序员不是好的段子手
