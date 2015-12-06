@@ -11,3 +11,4 @@ permalink: /:year/:month/:day/:title.html
 markdown: Kramdown
 
 subtitle: 不学数学的程序员不是好的段子手
+favicon: /images/avatar.jpg
