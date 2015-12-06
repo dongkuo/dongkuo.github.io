@@ -1,23 +1,38 @@
 ---
-layout: default
+layout: layout
 ---
-
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+<ul id="category">
+	<li class="active">
+		<h1 class="page-heading">最新</h1>
+	  <ul class="post-list">
+	    {% for post in site.posts %}
+	      <li>
+	        <span class="post-meta">{{ post.date | date: " %Y年%m月%-d日" }}</span>
+	        <h2>
+	          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+	        </h2>
+	      </li>
+	    {% endfor %}
+	  </ul>
+	</li>
+	{% for category in site.categories %}
+	<li>
+	  <h1 class="page-heading">{{category[0]}}</h1>
+	  <ul class="post-list">
+	    {% for post in category[1] %}
+	      <li>
+	        <span class="post-meta">{{ post.date | date: " %Y年%m月%-d日" }}</span>
+	
+	        <h2>
+	          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+	        </h2>
+	      </li>
+	    {% endfor %}
+	  </ul>
+  </li>
+	{% endfor %}
+</ul>
+<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+<script>
+	$(document).pjax('.post-link', 'body', {fragment:'body', timeout:8000});
+</script>

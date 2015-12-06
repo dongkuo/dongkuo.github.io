@@ -1,3 +1,11 @@
+@font-face {font-family: 'iconfont';
+    src: url('/iconfont/iconfont.eot'); /* IE9*/
+    src: url('/iconfont/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/iconfont/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('/iconfont/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('/iconfont/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
 /**
  * Reset some basic elements
  */
@@ -8,11 +16,6 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
-
-/**
- * Basic styling
- */
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: $text-color;
@@ -25,8 +28,6 @@ body {
     font-kerning: normal;
 }
 
-
-
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
@@ -37,8 +38,6 @@ ul, ol, dl, figure,
     margin-bottom: $spacing-unit / 2;
 }
 
-
-
 /**
  * Images
  */
@@ -46,8 +45,6 @@ img {
     max-width: 100%;
     vertical-align: middle;
 }
-
-
 
 /**
  * Figures
@@ -59,8 +56,6 @@ figure > img {
 figcaption {
     font-size: $small-font-size;
 }
-
-
 
 /**
  * Lists
@@ -76,16 +71,12 @@ li {
     }
 }
 
-
-
 /**
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
     font-weight: $base-font-weight;
 }
-
-
 
 /**
  * Links
@@ -103,8 +94,9 @@ a {
         text-decoration: underline;
     }
 }
-
-
+a:hover{
+    text-decoration: none;
+}
 
 /**
  * Blockquotes
@@ -121,8 +113,6 @@ blockquote {
         margin-bottom: 0;
     }
 }
-
-
 
 /**
  * Code formatting
@@ -149,8 +139,6 @@ pre {
         padding-left: 0;
     }
 }
-
-
 
 /**
  * Wrapper

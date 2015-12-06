@@ -6,16 +6,23 @@
 
 
 // Our variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-family: Lato, "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", sans-serif;
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
+// slide bar
+$slide-bar-width: 25%; // when large
+$slide-bar-height: 56px; // when small
+$slide-bar-color: #3f3f3f;
+$slide-bar-primary-color: #BEBEBE;
+$slide-bar-accent-color: #B1B1B1;
+$slide-bar-background: url("http://lorempixel.com/800/1500/nature/");
 
-$spacing-unit:     30px;
+$spacing-unit: 30px;
 
 $text-color:       #111;
-$background-color: #fdfdfd;
+$background-color: #fbfbfb;
 $brand-color:      #2a7ae2;
 
 $grey-color:       #828282;

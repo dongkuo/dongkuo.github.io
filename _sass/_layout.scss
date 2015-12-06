@@ -1,94 +1,92 @@
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+
 /**
  * Site header
  */
-.site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
+#home-head {
+//  background: $slide-bar-color $slide-bar-background;
+    background: $slide-bar-color;
+    width: $slide-bar-width;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    text-align: center;
+}
+#category{
+    margin: 0;
+}
+#category > li{
+    display: none;
+}
 
-    // Positioning context for the mobile navigation icon
-    position: relative;
+#category > .active{
+    display: block;
+}
+
+.site-avatar{
+    width: 30%;
+    border-radius: 70%;
+    margin: 0 $spacing-unit;
+    border: 6px solid $grey-color-light;
 }
 
 .site-title {
-    font-size: 26px;
-    font-weight: 300;
-    line-height: 56px;
-    letter-spacing: -1px;
-    margin-bottom: 0;
-    float: left;
-
+    margin-top: $spacing-unit;
+    display: block;
+    width: 100%;
+    font-size: 2em;
+    font-weight: 600;
     &,
     &:visited {
-        color: $grey-color-dark;
+        color: $slide-bar-primary-color;
     }
+    &:hover{
+        color:white;
+    }
+}
+.site-subtitle{
+    font-size: 1.3em;
+    margin-top: $spacing-unit / 4;
+    color: $slide-bar-accent-color;
+}
+
+.site-statistics{
+    margin-top: $spacing-unit;
+    padding: 0 $spacing-unit;
+    color: $slide-bar-accent-color;
+    overflow: hidden;
+}
+.site-statistics div{
+    width: 49%;
+    float: left;
+}
+
+.site-statistics p{
+    margin: 0;
+    padding: 0;
 }
 
 .site-nav {
-    float: right;
-    line-height: 56px;
-
-    .menu-icon {
-        display: none;
+    margin-top: $spacing-unit * 2;
+    text-align: center;
+    list-style: none;
+}
+.site-nav li{
+    padding: 4px 20px;
+    font-size: 1.1em;
+}
+.site-nav a{
+    &,
+    &:visited {
+        color: $slide-bar-primary-color;
     }
-
-    .page-link {
-        color: $text-color;
-        line-height: $base-line-height;
-
-        // Gaps between nav items, but not on the last one
-        &:not(:last-child) {
-            margin-right: 20px;
-        }
-    }
-
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: $spacing-unit / 2;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
-
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
-
-        .trigger {
-            clear: both;
-            display: none;
-        }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-
-            &:not(:last-child) {
-                margin-right: 0;
-            }
-            margin-left: 20px;
-        }
+    &:hover{
+        color:white;
     }
 }
 
@@ -168,11 +166,12 @@
  * Page content
  */
 .page-content {
-    padding: $spacing-unit 0;
+    padding: ($spacing-unit+$slide-bar-height) $slide-bar-width;
 }
 
 .page-heading {
-    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid $grey-color-light;
 }
 
 .post-list {
@@ -234,9 +233,79 @@
 
     h4 {
         font-size: 20px;
-
         @include media-query($on-laptop) {
             font-size: 18px;
         }
+    }
+}
+
+#post-nav{
+    width: 100%;
+    height: $slide-bar-height;
+    background: $slide-bar-color;
+    text-align: right;
+    position: fixed;
+}
+.post-item{
+    line-height: $slide-bar-height;
+}
+#post-avatar{
+    width: $slide-bar-height - 16;
+    height: $slide-bar-height - 16;
+    border-radius: 70%;
+    border: 2px solid $grey-color-light;
+}
+#post-username{
+    margin: 0 $spacing-unit;
+    &,
+    &:visited {
+        color: $slide-bar-primary-color;
+    }
+    &:hover{
+        color:white;
+    }
+}
+#post-back{
+    float: left;
+    margin: 0 $spacing-unit;
+    font-size: 1.5em;
+    &,
+    &:visited {
+        color: $slide-bar-primary-color;
+    }
+}
+
+@media (max-width: 1200px){
+    .site-title {
+        text-align: left;
+        font-size: 1em;
+        font-weight: 400;
+        margin: 0;
+        line-height: $slide-bar-height;
+        float: left;
+        width: auto;
+    }
+    #home-head {
+        margin:0;
+        width: 100%;
+        border-bottom: 1px solid $grey-color-light;
+        height: $slide-bar-height;
+        position: fixed;
+        background: $slide-bar-color;
+    }
+    
+    .site-avatar{
+        width: $slide-bar-height - 16;
+        height: $slide-bar-height - 16;
+        border-radius: 70%;
+        border: 2px solid $grey-color-light;
+    }
+    
+    .changeable{
+        display: none;
+    }
+    
+    .page-heading{
+        margin-top: $slide-bar-height;
     }
 }
