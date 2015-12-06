@@ -179,7 +179,9 @@
     list-style: none;
 
     > li {
-        margin-bottom: $spacing-unit;
+        margin-bottom: $spacing-unit / 2;
+        border-bottom: 1px dashed $grey-color-light;
+        padding-bottom: $spacing-unit / 2;
     }
 }
 
@@ -191,6 +193,7 @@
 .post-link {
     display: block;
     font-size: 24px;
+    margin-bottom: $spacing-unit / 4;
 }
 
 
@@ -249,6 +252,11 @@
     background: $slide-bar-color;
     text-align: right;
     position: fixed;
+}
+.post-tag{
+    padding: 2px 6px;
+    border-radius: 10px;
+	background:$grey-color-light;
 }
 .post-item{
     line-height: $slide-bar-height;

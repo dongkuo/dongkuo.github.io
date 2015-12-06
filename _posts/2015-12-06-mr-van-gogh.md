@@ -3,6 +3,7 @@ layout: post
 title:  "梵高先生"
 date:   2015-12-06 17:21:11 +0800
 categories: 随笔
+tags: 随笔  感悟
 ---
 **1.**
 
