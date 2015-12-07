@@ -41,7 +41,6 @@ layout: layout
   </li>
 	{% endfor %}
 </ul>
-<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 <script>
 	$(document).pjax('.post-link', 'body', {fragment:'body', timeout:8000});
 </script>

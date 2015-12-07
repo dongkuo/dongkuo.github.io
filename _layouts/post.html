@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	{% include head.html %}
+
 	<body>
 		<nav id="post-nav">
 			<a class="iconfont post-item" id="post-back" href="javascript:history.go(-1);">&#xe62b;</a>
@@ -16,8 +17,7 @@
 							<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%Y年%m月%-d日" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}
 							<span class="post-meta">　　标签：
 							{% for tag in page.tags %}
-								<span class="post-tag">{{ tag }}</span>
-							{% endfor %}
+								<span class="post-tag">{{ tag }}</span> {% endfor %}
 							</span>
 						</p>
 					</header>
@@ -27,6 +27,16 @@
 				</article>
 			</div>
 		</div>
+		<!--高速版-->
+		<div id="SOHUCS" class="wrapper" sid="{{page.id}}"></div>
+		<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js"></script>
+		<script type="text/javascript">
+			window.changyan.api.config({
+				appid: 'cys8ajiE2',
+				conf: 'prod_6ea49835bf6ed6462becfc8a4c7dccdd'
+			});
+		</script>
 		{% include footer.html %}
 	</body>
+
 </html>
