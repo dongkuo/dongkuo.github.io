@@ -166,7 +166,7 @@
  * Page content
  */
 .page-content {
-    padding: ($spacing-unit+$slide-bar-height) $slide-bar-width;
+    padding: $spacing-unit $slide-bar-width;
 }
 
 .page-heading {
@@ -214,8 +214,11 @@
         font-size: 36px;
     }
 }
+.post-content{
+    margin: ($spacing-unit + $slide-bar-height) 0;
+}
 
-.post-content {
+.post-body {
     margin-bottom: $spacing-unit;
 
     h2 {
@@ -251,6 +254,8 @@
     height: $slide-bar-height;
     background: $slide-bar-color;
     text-align: right;
+    top: 0;
+    left: 0;
     position: fixed;
 }
 .post-tag{
