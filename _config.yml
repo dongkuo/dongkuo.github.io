@@ -9,6 +9,8 @@ permalink: /:year/:month/:day/:title.html
 
 # Build settings
 markdown: Kramdown
+kramdown:
+    input: GFM
 
 subtitle: 不学数学的程序员不是好的段子手
 favicon: /images/avatar.jpg
