@@ -274,13 +274,13 @@
     line-height: $slide-bar-height;
 }
 #post-avatar{
+	margin: 0 $spacing-unit;
     width: $slide-bar-height - 20;
     height: $slide-bar-height - 20;
     border-radius: 70%;
     border: 2px solid $grey-color-light;
 }
 #post-username{
-    margin: 0 $spacing-unit;
     &,
     &:visited {
         color: $slide-bar-primary-color;
