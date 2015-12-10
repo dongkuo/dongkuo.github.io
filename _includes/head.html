@@ -10,11 +10,10 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
   <link rel="shortcut icon" href="{{ site.favicon }}" />
+  <script src="https://cdn.bootcss.com/highlight.js/9.0.0/highlight.min.js"></script>
   <script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdn.bootcss.com/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>
   <script src="https://cdn.bootcss.com/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  <script src="https://cdn.bootcss.com/highlight.js/9.0.0/highlight.min.js"></script>
-  <script>
-		hljs.initHighlightingOnLoad();
-  </script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
 </head>
