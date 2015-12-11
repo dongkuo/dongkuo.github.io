@@ -263,6 +263,7 @@
     top: 0;
     left: 0;
     position: fixed;
+	z-index:10000;
 }
 .post-tag{
     padding: 2px 8px;
@@ -316,6 +317,7 @@
         height: $slide-bar-height;
         position: fixed;
         background: $slide-bar-color;
+		z-index:10000;
     }
     
     .site-avatar{
@@ -338,9 +340,6 @@
 	.page-content {
 		padding: $spacing-unit / 2;
 	}
-    #post-avatar{
-        display: none;
-    }
     #post-nav{
         text-align: center;
     }
