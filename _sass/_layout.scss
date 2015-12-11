@@ -93,6 +93,9 @@
 .Ajiang{
 	color: $slide-bar-accent-color;
 }
+.Ajiang:hover{
+	color: white;
+}
 .Ajiang:visited{
 	color: $slide-bar-accent-color;
 }
@@ -340,7 +343,4 @@
 	.page-content {
 		padding: $spacing-unit / 2;
 	}
-    #post-nav{
-        text-align: center;
-    }
 }
