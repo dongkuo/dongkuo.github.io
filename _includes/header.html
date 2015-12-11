@@ -9,14 +9,14 @@
 				<p>{{site.posts.size}}</p>
 			</div>
 			<div>
-				<p>访问量</p>
+				<p>最近更新</p>
 				<p>
-					
+					{{ site.time | date: "%Y-%m-%-d" }}
 				</p>
 			</div>
 		</div>
 		<nav class="site-nav">
-			<li><a href="javascript:void(0)" onclick="active(0)">最新</a></li>
+			<li><a href="javascript:void(0)" onclick="active(0)">全部</a></li>
 			{% for category in site.categories %}
 			<li><a href="javascript:void(0)" onclick="active({{forloop.index}})">{{ category[0] }}</a></li>
 			{% endfor %}
