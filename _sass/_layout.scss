@@ -328,10 +328,16 @@
     .changeable{
         display: none;
     }
+	.wrapper{
+		padding:0;
+	}
     
     .page-heading{
         margin-top: $slide-bar-height;
     }
+	.page-content {
+		padding: $spacing-unit / 2;
+	}
     #post-avatar{
         display: none;
     }
